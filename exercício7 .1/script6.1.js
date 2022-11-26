@@ -1,0 +1,54 @@
+var list = []
+var inpu = document.getElementById('num')
+var sele = document.querySelector('select#sele')
+var result = document.querySelector('div#result')
+var meio = document.querySelector('p#meio')       
+function adi(){
+    if (inpu.value.length == 0){
+        alert('[ERRO] Você deve inserir um valor.')
+    }
+    else if (inpu.value == 0){
+        alert('[ERRO] O valor não pode ser zero.')
+        inpu.value = ''
+        inpu.focus()
+    }
+    else{
+        list.push(Number(inpu.value))
+        var item = document.createElement('option')
+        item.text = `Valor ${Number(inpu.value)} adicionado`
+        sele.appendChild(item)
+        inpu.value = ''
+        inpu.focus()
+        result.innerHTML = ''
+    }
+} 
+function fin(){ 
+    if (list.length == 0){
+        alert('[ERRO] Você deve inserir algum valor.')
+    }
+    else {
+        const max = Math.max(...list)
+        const min = Math.min(...list)
+        var cont = 0
+        var soma = list.reduce(function(soma, i){
+            return soma + i
+        })
+        var media = soma / list.length
+        result.innerHTML = `No total, foram adicionados ${list.length} valores.<br><br>`
+        result.innerHTML += `O maior número informado foi ${max}.<br><br>`
+        result.innerHTML += `O menor número informado foi ${min}.<br><br>`
+        result.innerHTML += `A soma de todos os números foi ${soma}<br><br>`
+        result.innerHTML += `A média dos valores é ${media.toFixed(2)}`
+    }
+}
+function limp(){
+    if (list.length == 0){
+        alert('[ERRO] Não há valores para limpar.')
+    }
+    else{
+        result.innerHTML = ''
+        sele.length = 0
+        list.length = 0
+        inpu.focus()
+    }
+}

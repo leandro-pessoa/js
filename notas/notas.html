@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="stylesheet" href="notas.css">
+</head>
+<body>
+    <header><h1>Sistema de notas</h1></header>
+    <section>
+        <div>
+            Adicionar nota: <input type="number" name="inp" id="inp"> <input type="button" value="+" onclick="adicionar()" id="ad">
+        </div>
+        <div>
+            Nota mínima:
+            <input type="radio" name="min" id="" checked>5
+            <input type="radio" name="min" id="">6
+            <input type="radio" name="min" id="">7
+        </div>
+        <div>
+            <select name="sel" id="sel" size="6"></select>
+            <input type="button" value="Gerar média" id="ger" onclick="gerar()">
+            <input type="button" value="Limpar" id="limp" onclick="limpar()">
+        </div>
+        <div id="result1">...</div>
+        <div id="result2">...</div>
+    </section>
+    <footer id="foo">
+        <p>&copy;Leandro Pessoa</p>
+    </footer>
+    <script src="notas.js"></script>
+</body>
+</html>

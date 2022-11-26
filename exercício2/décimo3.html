@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo1.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+            Digite seu ano de nascimento:
+            <input type="number" name="idade" id="idade">
+            </p>
+        </div>
+        <div>
+            <p>
+            Sexo:
+            <input type="radio" name="sx" id="mas" checked>
+            <label for="mas">Masculino</label>
+            <input type="radio" name="sx" id="fem">
+            <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="cli()" id="but" onmouseenter="entra()" onmouseout="sai()">
+            </p>
+        </div>
+        <div id="result">
+            
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Leandro Pessoa</p>
+    </footer>
+    <script src="script1.js"></script>
+</body>
+</html>

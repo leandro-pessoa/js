@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(123, 123, 235);
+            font: normal 15pt arial;
+        }
+        h1#a{
+            background-color: rgb(0, 0, 0);
+            color: aliceblue;
+            text-align: center;
+        }
+        input#n1{
+            text-align: center;
+        }
+        input#op{
+            width: 1.2cm;
+            text-align: center;
+        }
+        input#n2{
+            text-align: center;
+        }
+        input#g{
+            font: normal 15pt arial;
+        }
+        div#b{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        div#c{
+            text-align: center;
+        }
+        div#d{
+            text-align: center;    
+        }
+        div#e{
+            text-align: center;
+            font: normal 25pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="a"><strong>CALCULADORA</strong></h1>
+    <div id="b" class="container">
+        <input type="number" name="n1" id="n1">
+        <input type="text" name="operador" id="op">
+        <input type="number" name="n2" id="n2"></br></br>
+    </div>
+    <div id="c" class="container">
+        <input type="button" value="Limpar campos" id="f" onclick="limp()"></br></br>
+        <input type="button" value="Fazer operação" id="g" onclick="cli()"></br></br>
+    </div>
+    <div id="d" class="container">
+        <strong>Resultado:</strong></br></br>
+    </div>
+    <div id="e" class="container">
+        ....
+    </div>
+    <script>
+        function cli(){
+        var a = document.querySelector('input#n1')
+        var b = document.querySelector('input#n2')
+        var c = document.querySelector('input#op')
+        var n1 = Number(a.value)
+        var n2 = Number(b.value)
+        var op = c.value
+        var result = document.querySelector('div#e')
+        if (op == '+'){
+            result.innerHTML = n1 + n1
+        }
+        else{
+            if(op == '-'){
+               result.innerHTML = n1 - n2
+            }
+            if (op == 'x'){
+                result.innerHTML = n1 * n2
+            }    
+            if (op == '/'){
+                result.innerHTML = n1 / n2
+            }
+            if (op == '^'){
+                result.innerHTML = n1 ** n2
+            }
+        }
+        }
+        function limp(){
+            document.querySelector('input#n1').value = ''
+            document.querySelector('input#n2').value = ''
+            document.querySelector('input#op').value = ''
+        }
+    </script>
+</body>
+</html>

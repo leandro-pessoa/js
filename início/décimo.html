@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(252, 196, 127);
+            font: normal 15pt arial;
+            color: aliceblue;
+        }
+        h1#a{
+            background-color: aliceblue;
+            text-align: center;
+            color: rgb(252, 196, 127);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="a"><strong>Nacionalidade</strong></h1>
+    <strong>Digite o nome do seu país: </strong><input type="text" id="sel">
+    <input type="button" value="Verificar" id='but' onclick="click()">
+    <div id="f">..........</div>
+    <script>
+        function click(){
+        var sel = document.getElementById('sel')
+        var vc = document.querySelector('div#f')
+        vc.innerHTML = `Você digitou: ${sel}` 
+    }
+
+    </script>
+</body>
+</html>

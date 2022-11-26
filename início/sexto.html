@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            color: black;
+            font: normal 20pt calibri;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <h1><strong>Olá,</strong></h1>
+    <p>tudo bom?</p>
+    <p>aaaaaaaa</p>
+    <p id='bbbb'> <strong>bbbbbbbb</strong></p>
+    <div name="msg">Clique aqui.</div>
+    <script>
+        var teste = window.document.getElementsByTagName('p')[0]
+        var teste2 = document.getElementById('msg')
+        /*teste2.style.background = 'red'
+        teste2.innerText = 'Olá'*/
+        /*var teste3 = getElementByName('msg')
+        write(teste3)*/
+        var teste4 = document.querySelector('p#bbbb')
+        document.write(teste4.innerHTML)
+        teste4.style.background = 'blue'
+    </script>
+</body>
+</html>

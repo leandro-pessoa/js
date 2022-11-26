@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <header>
+        <h1><strong>CALCULADORA 2.0</strong></h1>
+    </header><br>
+    
+    <section>
+        <div id="res"></div>
+        <div>
+            <p id="l1">
+                <input type="button" value="Backspace" id="l1" name="back" onclick="action('back')">
+                <input type="button" value="C" id="l1" name="cancel" onclick="action('c')">
+                <input type="button" value="X^2" id="l1" name="pot" onclick="action('^')">
+            </p>
+            <p id="l2">
+                <input type="button" value="7" id="ln" name="sete" onclick="action(7)">
+                <input type="button" value="8" id="ln" name="oito" onclick="action(8)">
+                <input type="button" value="9" id="ln" name="nove" onclick="action(9)">
+                <input type="button" value="X" id="ln" name="mult" onclick="action('x')">
+            </p>
+            <p id="l3">
+                <input type="button" value="4" id="ln" name="quatro" onclick="action(4)">
+                <input type="button" value="5" id="ln" name="cinco" onclick="action(5)">
+                <input type="button" value="6" id="ln" name="seis" onclick="action(6)">
+                <input type="button" value="-" id="ln" name="sub" onclick="action('-')">
+            </p>
+            <p id="l4">
+                <input type="button" value="1" id="ln" name="um" onclick="action(1)">
+                <input type="button" value="2" id="ln" name="dois" onclick="action(2)">
+                <input type="button" value="3" id="ln" name="tres" onclick="action(3)">
+                <input type="button" value="+" id="ln" name="soma" onclick="action('+')">
+            </p>
+            <p>
+                <input type="button" value="0" id="zero" name="zero" onclick="action(0)">
+                <input type="button" value="/" id="divi" name="divi" onclick="action('/')">
+            </p>
+        </div>
+    </section>
+    <script src="script4.js"></script>
+</body>
+</html>

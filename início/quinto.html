@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quinto</title>
+    <style>
+        body {
+            background-color: rgb(151, 63, 63);
+            font: normal 15pt calibri;
+            color: aliceblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1><strong>Conta</strong></h1>
+    <script>
+        var num1 = Number(window.prompt('Digite o primeiro número: '))
+        var num2 = Number(window.prompt('Digite o segundo número: '))
+        var soma = num1 + num2
+        var subtração = num1 - num2
+        var multiplicação = num1 * num2
+        var divisão = num1 / num2
+        var exponenciação = num1 ** num2
+        document.write(`Os números selecionados foram ${num1} e ${num2}.</br>`)
+        document.write(`${num1} + ${num2} = ${soma}</br>`)
+        document.write(`${num1} - ${num2} = ${subtração}</br>`)
+        document.write(`${num1} * ${num2} = ${multiplicação}</br>`)
+        document.write(`${num1} / ${num2} = ${divisão}</br>`)
+        document.write(`${num1} ^ ${num2} = ${exponenciação}</br>`)
+        document.write('Suas contas foram feitas.')
+    </script>
+</body>
+</html>

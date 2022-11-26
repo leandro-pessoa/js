@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <header>
+        <div id="cima"></div>
+        <div>
+        <strong>Calculador de IMC</strong>
+        </div>
+        <div id="baixo"></div>
+    </header>
+    <section>
+        <div id="principal">
+            <p id="text">
+                Massa:<br>
+                Altura:
+            </p>
+            <p id="inpu">
+                <input type="number" name="mass" id="inp1"><br>
+                <input type="number" name="alt" id="inp2">
+            </p>
+            <p id="bu">
+                <input type="button" value="Gerar" id="butt" onclick="cli()" onmouseenter="entra1()" onmouseout="sai1()">
+                <input type="button" value="Limpar" id="limp" onclick="limp()" onmouseenter="entra2()" onmouseout="sai2()">
+            </p>
+        </div>
+        <div>
+            <p id="text2">
+                IMC:<br>
+                Classe:
+            </p>
+            <p id="result1"></p>
+            <p id="result2"></p>
+        </div>
+        <div id="meio">
+            RESULTADO 
+        </div>
+    </section>
+    <script src="script5.js"></script>
+</body>
+</html>

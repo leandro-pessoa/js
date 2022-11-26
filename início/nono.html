@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(199, 98, 98);
+            font: normal 15pt calibri;
+            color: rgb(248, 246, 246);
+        }
+        h1#a{
+            background-color: whitesmoke;
+            text-align: center;
+            color: rgb(197, 99, 99);
+        }
+        input#vel{
+            font: normal 18pt calibri;
+            text-align: center;
+        }
+        input#but{
+            font: normal 18pt calibri;
+        }
+        p#b{
+            font-size: 20pt;
+        }
+        p#c{
+            font-size: 20pt;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="a"><strong>Sistema de velocidades</strong></h1>
+    Velocidade: <input type="number" name="vel" id="vel"> Km/h
+    <input type="button" value="Verificar" id="but" onclick="clic()">
+    <p id="b"><strong>...</strong></p>
+    <p id="c"><strong>...</strong></p>
+    <script>
+        function clic(){
+        var vel = document.getElementById('vel')
+        var vel1 = Number(vel.value)
+        var result1 = document.getElementById('b')
+        var result2 = document.getElementById('c')
+        result1.innerHTML = `Sua velocidade é <strong>${vel1} Km/h</strong>.`
+        if(vel1 > 80){
+            result2.innerHTML = `Sua velocidade é maior que o permitido. Multado!` 
+        }
+        else{
+            result2.innerHTML = 'Velocidade permitida. Boa viagem'
+        }
+    }
+
+    </script>
+</body>
+</html>

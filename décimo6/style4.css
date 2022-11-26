@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(229, 248, 248);
+    font: normal 15pt calibri;
+}
+header{
+    background-color: white;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    height: 50px;
+    border-radius: 10px;
+    padding: 2px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.185);
+    padding: 3px;
+}
+h1{
+    background-color: rgb(148, 224, 203);
+    width: 400px;
+    margin: auto;
+    border-radius: 5px;
+}
+section{
+    background-color: white;
+    width: 350px;
+    margin: auto;
+    height: 400px;
+    padding: 3px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.185);
+}
+div#res{
+    background-color: rgba(0, 0, 0, 0.075);
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font: normal 23pt calibri;
+    padding: 2px;
+}
+
+input#l1{
+    height: 35px;
+    width: 100px;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.075);
+    
+}
+p#l1{
+    position: relative;
+    left: 42px;
+}
+input#ln{
+    height: 45px;
+    width: 84px;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.075);
+}
+input#divi{
+    height: 45px;
+    width: 84px;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.075);
+}
+input#zero{
+    height: 45px;
+    width: 84px;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.075);
+}
+input#divi{
+    position: relative;
+    left: 177px;
+}
+input#zero{
+    position: relative;
+    left: 90px;
+}

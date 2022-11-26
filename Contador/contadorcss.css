@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(182, 192, 192);
+    font: normal 20pt arial;
+}
+section{
+    text-align: center;
+    position: relative;
+    top: 170px;
+    
+}
+h1#conta{
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164);
+    position: relative;
+    top: -30px;
+}
+div#result{
+    font: normal 50pt arial;
+    background-color: white;
+    border-radius: 10px;
+    width: max-content;
+    margin: auto;
+}
+input{
+    background-color: white;
+    border-radius: 5px;
+    border-color: rgba(191, 247, 247, 0.836);
+}
+select#sel{
+    width: 100px;
+}

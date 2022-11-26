@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contadorcss.css">
+</head>
+<body>
+    <section>
+        <div>
+            <h1 id="conta"><strong>Contador</strong></h1><br>
+        </div>
+        <div id="result">
+            0
+        </div><br>
+        <div>
+            <p>
+                <input type="button" value="Decrementar" onclick="decrementar()" id="decre">
+                <input type="button" value="Resetar" onclick="resetar()" id="rese">
+                <input type="button" value="Aumentar" onclick="aumentar()" id="aume">
+            </p>
+            <p>
+                <input type="radio" name="sel" id="sel1" checked> +1
+                <input type="radio" name="sel" id="sel5"> +5
+                <input type="radio" name="sel" id="sel10"> +10
+                <input type="radio" name="sel" id="sel100"> +100
+            </p>
+        </div>
+    </section>
+    <script src="contadorjs.js"></script>
+</body>
+</html>

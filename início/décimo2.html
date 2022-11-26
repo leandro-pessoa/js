@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(253, 253, 253);
+            font: normal 15pt arial;
+        }
+        div#i{
+            background: rgb(226, 214, 145);
+            justify-content: center;
+            align-items: center;
+            font-size: 30pt;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.342);
+        }
+    
+        main#b{
+            background: rgb(226, 214, 145);
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            margin: 23px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.342);
+        }
+        div#c{
+            text-align: center;
+
+        }
+        div#d{
+            text-align: center;
+        }
+        div#e{
+            text-align: center;
+            font: normal 25pt arial;
+            background-color: white;
+            width: 150px;
+            margin: auto;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.192);
+        }
+        div#h{
+            text-align: center;
+        }
+        div#i{
+            text-align: center;
+        }
+        div#j{
+            text-align: center;
+            padding: 10px;
+        }
+        input#op{
+            width: 1.2cm;
+            text-align: center;
+            border-radius: 5px;
+            border-color: white;
+        }
+        input#f{
+            background: rgb(255, 255, 255);
+            border-color: white;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.192);
+        }
+        input#g{
+            font: normal 15pt arial;
+            background: rgb(255, 255, 255);
+            border-color: white;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.192);
+        }
+        input#n1{
+            text-align: center;
+            border-radius: 5px;
+            border-color: white;
+        }
+        input#n2{
+            text-align: center;
+            border-radius: 5px;
+            border-color: white;
+        }
+    </style>
+</head>
+<body>
+    <main id="a" class="container">
+        <div id="i" class="container">
+            <strong>CALCULADORA</strong>
+        </div>
+    </main>
+    <main id="b" class="container">
+        <div id="j">
+            <strong>Insira aqui o seu cálculo:</strong>
+        </div>
+        <div id="h">    
+            <input type="number" name="n1" id="n1">
+            <input type="text" name="operador" id="op">
+            <input type="number" name="n2" id="n2"></br></br>
+        </div>
+        <div id="c">
+            <input type="button" value="Limpar campos" id="f" onclick="limp()" onmouseenter="entra1()" onmouseout="sai1()"></br></br>
+            <input type="button" value="Fazer operação" id="g" onclick="cli()" onmouseenter="entra2()" onmouseout="sai2()"></br></br>
+        </div>
+        <div id="d">
+            <strong>Resultado:</strong></br></br>
+        </div>    
+        <div id="e">
+            ....
+        </div>
+    </main>
+    <script>
+        function cli(){
+        var a = document.querySelector('input#n1')
+        var b = document.querySelector('input#n2')
+        var c = document.querySelector('input#op')
+        var n1 = Number(a.value)
+        var n2 = Number(b.value)
+        var op = c.value
+        var result = document.querySelector('div#e')
+        if (op == '+'){
+            result.innerHTML = n1 + n2
+        }
+        else{
+            if(op == '-'){
+               result.innerHTML = n1 - n2
+            }
+            if (op == 'x'){
+                result.innerHTML = n1 * n2
+            }    
+            if (op == '/'){
+                result.innerHTML = n1 / n2
+            }
+            if (op == '^'){
+                result.innerHTML = n1 ** n2
+            }
+        }
+        }
+        function limp(){
+            document.querySelector('input#n1').value = ''
+            document.querySelector('input#n2').value = ''
+            document.querySelector('input#op').value = ''
+        }
+        function entra1(){
+            var sel1 = document.getElementById('f')
+            sel1.style.background = '#D8D6D6'
+        }
+        function entra2(){
+            var sel2 = document.getElementById('g')
+            sel2.style.background = '#D8D6D6'
+        }
+        function sai1(){
+            var sel1 = document.getElementById('f')
+            sel1.style.background = 'white'
+        }
+        function sai2(){
+            var sel1 = document.getElementById('g')
+            sel1.style.background = 'white'
+        }
+    </script>
+</body>
+</html>
