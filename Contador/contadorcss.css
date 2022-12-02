@@ -29,6 +29,10 @@ input{
     border-radius: 5px;
     border-color: rgba(191, 247, 247, 0.836);
 }
+input:hover{
+    background-color: rgba(191, 247, 247, 0.836);
+    transition: 0.5s;
+}
 select#sel{
     width: 100px;
 }
