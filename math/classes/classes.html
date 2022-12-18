@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../estilo/principal.css">
     <link rel="shortcut icon" href="../imagens/js-logo-200.png" type="image/x-icon">
     <style>
-        
+
     </style>
 </head>
 <body>
@@ -19,28 +19,54 @@
                     <img src="../imagens/menu.png" alt="">
                 </button>
             </div>
-            <a href="../principal/principal.html">
-                <div id="img">
-                    <img src="../imagens/js-logo-200.png" alt="">
-                </div>
-            </a>
+            <div id="img">
+                <a href="../principal/principal.html"><img src="../imagens/js-logo-200.png" alt=""></a>
+            </div>
         </section>
     </header>
-    <div class="ef">
-        <nav id="nav">
+    <nav id="nav">
+        <span class="nav-content">
             <button id="fechar">X</button>
             <h2>Conteúdo</h2><hr color="#ffffff">
             <div>
                 <a href="../math/math.html"><p>Math</p></a>
             </div>
-        </nav>
-    </div>
+        </span>
+    </nav>
     <main>
         <h2 class="principal">Classes</h2><hr>
+        <section class="codigo">
+            <pre id="cod">
+let campo = document.getElementById("cod");
+class blindado{
+    constructor(nome, pais){
+        this.nome = nome;
+        this.pais = pais;
+    }
+}
+let tiger = new blindado("Tiger I", "Alemanha");
+campo.innerHTML = `O ${tiger.nome} foi criado pela ${tiger.pais} durante a Segunda Guerra Mundial.`;
+            </pre>
+        </section>
+        <h2 class="h2res">Resultado(s)</h2>
+        <section class="codigo resultado">
+            <pre id="res"></pre>
+        </section>
     </main>
     <footer>
         &copy; Leandro Pessoa
     </footer>
     <script src="../script/principal.js"></script>
+    <script>
+        let campo = document.getElementById("res");
+        class blindado{
+            constructor(nome, pais){
+                this.nome = nome;
+                this.pais = pais;
+            }
+        }
+        let tiger = new blindado("Tiger I", "Alemanha");
+        campo.innerHTML = `O ${tiger.nome} foi criado pela ${tiger.pais} durante a Segunda Guerra Mundial.`;
+    </script>
 </body>
 </html>
