@@ -8,32 +8,35 @@
     <link rel="stylesheet" href="../estilo/principal.css">
     <link rel="shortcut icon" href="../imagens/js-logo-200.png" type="image/x-icon">
     <style>
-        div#img{
-            top: -4px;
-        }
-        div#img img{
-            width: 55px;
-        }
+        
     </style>
 </head>
 <body>
     <header>
         <section>
-            <div id="img">
-                <img src="../imagens/js-logo-200.png" alt="">
+            <div>
+                <button id="but">
+                    <img src="../imagens/menu.png" alt="">
+                </button>
             </div>
+            <a href="../principal/principal.html">
+                <div id="img">
+                    <img src="../imagens/js-logo-200.png" alt="">
+                </div>
+            </a>
         </section>
     </header>
+    <div class="ef">
+        <nav id="nav">
+            <button id="fechar">X</button>
+            <h2>Conteúdo</h2><hr color="#ffffff">
+            <div>
+                <a href="../math/math.html"><p>Math</p></a>
+            </div>
+        </nav>
+    </div>
     <main>
-        <h2>Estudos sobre:</h2>
-        <fieldset>
-            <a href="../classes/classes.html" target="_self" rel="next">
-                <p>Classes</p>
-            </a>
-            <a href="../math/math.html" target="_self" rel="next">
-                <p>Math</p>
-            </a>
-        </fieldset>
+        <h2 class="principal">Classes</h2><hr>
     </main>
     <footer>
         &copy; Leandro Pessoa
