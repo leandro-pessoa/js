@@ -11,7 +11,6 @@ body{
     background-color: rgb(235, 235, 235);
 }
 header{
-    background-color: #F7E018;
     height: 70px;
 }
 header > section{
@@ -22,6 +21,15 @@ header > section{
 }
 header div#img img{
     width: 55px;
+}
+header div#img{
+    border-radius: 20px;
+    overflow: hidden;
+}
+header div#img:active{
+    transform: translate(-4px, -4px);
+    transition: transform 0.7s;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.233);
 }
 button#but{
     background-color: transparent;
@@ -102,6 +110,9 @@ nav p:hover{
     transition: transform 0.2s;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.205);
     border-color: white;
+}
+nav p:active{
+    background-color: #f7e75e;
 }
 nav a{
     text-decoration: none;
