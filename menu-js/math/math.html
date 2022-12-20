@@ -38,15 +38,165 @@
     </div>
     <main>
         <h2 class="principal">Math</h2><hr>
-        <section class="codigo">
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Math.round( )</h2>
             <pre>
-                
+let res = document.querySelector('pre#res');
+let n1 = 3.4;
+res.innerHTML = Math.round(n1);
             </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Math.ceil( )</h2>
+            <pre>
+let res2 = document.querySelector('pre#res2');
+res2.innerHTML = Math.ceil(3.1)            
+            </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res2"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Math.floor( )</h2>
+            <pre>
+let res3 = document.querySelector('pre#res3');
+res3.innerHTML = Math.floor(3.8);
+            </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res3"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Math.trunc( )</h2>
+            <pre>
+let res4 = document.querySelector('pre#res4');
+res4.innerHTML = Math.trunc(4.4);
+            </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res4"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Math.sign( )</h2>
+            <pre>
+    
+            </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res5"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Math.pow( )</h2>
+            <pre>
+let res6 = document.querySelector('pre#res6');
+res6.innerHTML = Math.pow(2, 3);
+            </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res6"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Math.sqrt( )</h2>
+            <pre>
+let res7 = document.querySelector('pre#res7');
+res7.innerHTML = Math.sqrt(49);
+            </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res7"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Math.abs( )</h2>
+            <pre>
+let res8 = document.querySelector('pre#res8');
+res8.innerHTML = Math.abs(-4.5);
+            </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res8"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Math.min( )</h2>
+            <pre>
+let res9 = document.querySelector('pre#res9');
+res9.innerHTML = Math.min(1, 200, 0.5, 40, 500);
+            </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res9"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Math.max( )</h2>
+            <pre>
+let res10 = document.querySelector('pre#res10');
+res10.innerHTML = Math.max(1, 200, 0.5, 40, 500);
+            </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res10"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Math.random( )</h2>
+            <pre>
+    
+            </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res11"></pre>
         </section>
     </main>
     <footer>
         &copy; Leandro Pessoa
     </footer>
     <script src="../script/principal.js"></script>
+    <script>
+        let res = document.querySelector('pre#res');
+        let n1 = 3.4;
+        res.innerHTML = Math.round(n1);
+
+        let res2 = document.querySelector('pre#res2');
+        res2.innerHTML = Math.ceil(3.1);
+
+        let res3 = document.querySelector('pre#res3');
+        res3.innerHTML = Math.floor(3.8);
+
+        let res4 = document.querySelector('pre#res4');
+        res4.innerHTML = Math.trunc(4.4);
+
+        let res5 = document.querySelector('pre#res5');
+        res5.innerHTML = Math.sign();
+
+        let res6 = document.querySelector('pre#res6');
+        res6.innerHTML = Math.pow(2, 3);
+
+        let res7 = document.querySelector('pre#res7');
+        res7.innerHTML = Math.sqrt(49);
+
+        let res8 = document.querySelector('pre#res8');
+        res8.innerHTML = Math.abs(-4.5);
+
+        let res9 = document.querySelector('pre#res9');
+        res9.innerHTML = Math.min(1, 200, 0.5, 40, 500);
+
+        let res10 = document.querySelector('pre#res10');
+        res10.innerHTML = Math.max(1, 200, 0.5, 40, 500);
+
+        let res11 = document.querySelector('pre#res11');
+        res11.innerHTML = (Math.random()).toFixed(1);
+    </script>
+    <!--
+    <section class="codigo" style="min-height: 130px;">
+        <h2></h2>
+        <pre>
+
+        </pre>
+    </section>
+    <section class="codigo resultado" style="min-height: 10px;">
+        <pre id="res"></pre>
+    </section>
+    -->
 </body>
 </html>

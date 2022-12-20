@@ -149,6 +149,7 @@ section.codigo{
     background-color: rgb(55, 55, 71);
     color: white;
     padding: 30px;
+    padding-bottom: 10px;
     text-shadow: 2px 2px 3px rgb(22, 22, 34);
     border-radius: 10px;
     max-width: 600px;
