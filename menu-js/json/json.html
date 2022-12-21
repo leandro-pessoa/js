@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classes</title>
+    <title>JSON</title>
     <link rel="stylesheet" href="../estilo/principal.css">
-    <link rel="shortcut icon" href="../imagens/js-logo-200.png" type="image/x-icon">
-    <style>
-
-    </style>
+    <link rel="shortcut icon" href="../imagens/js-logo.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -30,27 +27,22 @@
             <h2>Conteúdo</h2><hr color="#ffffff">
             <div>
                 <a href="../math/math.html"><p>Math</p></a>
-                <a href="../json/json.html"><p>JSON</p></a>
+                <a href="../classes/classes.html"><p>Classes</p></a>
                 <a href="../local-storage/ls.html"><p>Local storage</p></a>
             </div>
         </span>
     </nav>
     <main>
-        <h2 class="principal">Classes</h2><hr>
+        <h2 class="principal">JSON</h2><hr>
         <section class="codigo">
-            <pre id="cod">
-let campo = document.getElementById("cod");
-class blindado{
-    constructor(nome, pais){
-        this.nome = nome;
-        this.pais = pais;
-    }
-}
-let tiger = new blindado("Tiger I", "Alemanha");
-campo.innerHTML = `O ${tiger.nome} foi criado pela ${tiger.pais} durante a Segunda Guerra Mundial.`;
+            <h2>JSON simples</h2>
+            <pre>
+let res = document.querySelector('pre#res');
+let dados = '{ "pessoas" : [{ "nome" : "Leandro", "sobrenome" : "Pessoa"}, { "nome" : "Lucas", "sobrenome" : "Pessoa"} ]}';
+const list = JSON.parse(dados);
+res.innerHTML = `${list.pessoas[0].nome} ${list.pessoas[0].sobrenome} é irmão de ${list.pessoas[1].nome} ${list.pessoas[1].sobrenome}`;
             </pre>
         </section>
-        <h2 class="h2res">Resultado(s)</h2>
         <section class="codigo resultado">
             <pre id="res"></pre>
         </section>
@@ -60,15 +52,11 @@ campo.innerHTML = `O ${tiger.nome} foi criado pela ${tiger.pais} durante a Segun
     </footer>
     <script src="../script/principal.js"></script>
     <script>
-        let campo = document.getElementById("res");
-        class blindado{
-            constructor(nome, pais){
-                this.nome = nome;
-                this.pais = pais;
-            }
-        }
-        let tiger = new blindado("Tiger I", "Alemanha");
-        campo.innerHTML = `O ${tiger.nome} foi criado pela ${tiger.pais} durante a Segunda Guerra Mundial.`;
+        let res2 = document.querySelector('pre#res2');
+        let res = document.querySelector('pre#res');
+        let dados = '{ "pessoas" : [{ "nome" : "Leandro", "sobrenome" : "Pessoa"}, { "nome" : "Lucas", "sobrenome" : "Pessoa"} ]}';
+        const list = JSON.parse(dados);
+        res.innerHTML = `${list.pessoas[0].nome} ${list.pessoas[0].sobrenome} é irmão de ${list.pessoas[1].nome} ${list.pessoas[1].sobrenome}`;
     </script>
 </body>
 </html>

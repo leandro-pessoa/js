@@ -103,6 +103,7 @@ nav p{
     border-radius: 10px;
     padding-left: 20px;
     border: 1px solid black;
+    margin-bottom: 5px;
 }
 nav p:hover{
     background-color: #F7E018;
@@ -134,6 +135,9 @@ h2{
 .h2res{
     margin-top: 30px;
 }
+h3{
+    margin-top: 10px;
+}
 .principal{
     text-align: center;
 }
@@ -153,8 +157,10 @@ section.codigo{
     text-shadow: 2px 2px 3px rgb(22, 22, 34);
     border-radius: 10px;
     max-width: 600px;
-    min-height: 200px;
     overflow: auto;
+}
+section.codigo > h2{
+    font-size: 1.3em;
 }
 section.resultado{
     height: 35px;

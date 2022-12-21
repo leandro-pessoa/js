@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu JS</title>
+    <title>Math</title>
     <link rel="stylesheet" href="../estilo/principal.css">
     <link rel="shortcut icon" href="../imagens/js-logo-200.png" type="image/x-icon">
     <style>
@@ -32,6 +32,8 @@
             <h2>Conteúdo</h2><hr color="#ffffff">
             <div>
                 <a href="../classes/classes.html"><p>Classes</p></a>
+                <a href="../json/json.html"><p>JSON</p></a>
+                <a href="../local-storage/ls.html"><p>Local storage</p></a>
             </div>
         </span>
     </nav>
@@ -82,7 +84,8 @@ res4.innerHTML = Math.trunc(4.4);
         <section class="codigo" style="min-height: 130px;">
             <h2>Math.sign( )</h2>
             <pre>
-    
+let res5 = document.querySelector('pre#res5');
+res5.innerHTML = Math.sign(-4);
             </pre>
         </section>
         <section class="codigo resultado" style="min-height: 10px;">
@@ -167,7 +170,7 @@ res10.innerHTML = Math.max(1, 200, 0.5, 40, 500);
         res4.innerHTML = Math.trunc(4.4);
 
         let res5 = document.querySelector('pre#res5');
-        res5.innerHTML = Math.sign();
+        res5.innerHTML = Math.sign(-4);
 
         let res6 = document.querySelector('pre#res6');
         res6.innerHTML = Math.pow(2, 3);
