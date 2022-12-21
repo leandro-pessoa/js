@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            max-width: 700px;
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+        }
+        div{
+            display: inline-table;
+            margin: 10px;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        main > p{
+            text-indent: 30px;
+            line-height: 1.2em;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            Cor de fundo:<br>
+            <input type="radio" name="corf" id="azul" checked><label for="azul">Azul</label><br>
+            <input type="radio" name="corf" id="ver"><label for="ver">Vermelho</label><br>
+            <input type="radio" name="corf" id="verd"><label for="verd">Verde</label>
+        </p>
+    </div>
+    <div>
+        <p>
+            Cor da letra:<br>
+            <input type="radio" name="corl" id="bra" checked><label for="bra">Branco</label><br>
+            <input type="radio" name="corl" id="pre"><label for="pre">Preto</label>
+        </p>
+    </div>
+    <p>
+        <button id="but">
+            gerar
+        </button>
+    </p>
+    <main>  
+        <h1>Título</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae labore ea, dolorum pariatur libero recusandae ipsam laudantium fugiat explicabo beatae earum aspernatur ipsum ad error nostrum facere assumenda eligendi exercitationem!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, vero ex vitae inventore consequatur dignissimos nesciunt veniam provident facere modi dolore harum alias voluptates recusandae. Dignissimos tenetur accusamus neque asperiores?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae saepe distinctio labore fugiat modi reiciendis dignissimos unde assumenda eveniet debitis! Veritatis quia cupiditate tenetur consequatur voluptatum ex aliquid. Beatae, molestias?</p>
+    </main>
+    <script>
+        let main = document.querySelector('main');
+        let fundo = document.getElementsByName('corf');
+        let letra = document.getElementsByName('corl');
+        but.addEventListener('click', e => {
+            if(fundo[0].checked){
+                localStorage.setItem('fundo', 'blue');
+            }
+            else if(fundo[1].checked){
+                localStorage.setItem('fundo', 'red');
+            }
+            else{
+                localStorage.setItem('fundo', 'green');
+            }
+            if(letra[0].checked){
+                localStorage.setItem('letra', 'white');
+            }
+            else{
+                localStorage.setItem('letra', 'black');
+            }
+            document.body.style.backgroundColor = localStorage.getItem('fundo');
+            main.style.color = localStorage.getItem('letra');
+        })
+        document.body.style.backgroundColor = localStorage.getItem('fundo');
+        main.style.color = localStorage.getItem('letra');
+    </script>
+</body>
+</html>

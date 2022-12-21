@@ -1,0 +1,34 @@
+@charset "UTF-8";
+h2{
+    padding: 30px;
+    padding-bottom: 0px;
+    font-size: 1.3em;
+    font-weight: 100;
+}
+hr{
+    width: 260px;
+    margin-left: 15px;
+}
+div{
+    padding-bottom: 0px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+p{
+    padding: 5px;
+    border-radius: 10px;
+    padding-left: 20px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    width: 200px;
+}
+p:hover{
+    background-color: #F7E018;
+    transform: translate(-2px, -2px);
+    transition: transform 0.2s;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.205);
+    border-color: white;
+}

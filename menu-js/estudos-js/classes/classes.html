@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classes</title>
-    <link rel="stylesheet" href="../estilo/principal.css">
-    <link rel="shortcut icon" href="../imagens/js-logo-200.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilo/principal.css">
+    <link rel="shortcut icon" href="../../imagens/js-logo-200.png" type="image/x-icon">
     <style>
 
     </style>
@@ -16,23 +16,18 @@
         <section>
             <div>
                 <button id="but">
-                    <img src="../imagens/menu.png" alt="">
+                    <img src="../../imagens/menu.png" alt="">
                 </button>
             </div>
             <div id="img">
-                <a href="../principal/principal.html" target="_self" rel="prev"><img src="../imagens/js-logo-200.png" alt=""></a>
+                <a href="../../principal/principal.html" target="_self" rel="prev"><img src="../../imagens/js-logo-200.png" alt=""></a>
             </div>
         </section>
     </header>
     <nav id="nav">
         <span class="nav-content">
             <button id="fechar">X</button>
-            <h2>Conteúdo</h2><hr color="#ffffff">
-            <div>
-                <a href="../math/math.html"><p>Math</p></a>
-                <a href="../json/json.html"><p>JSON</p></a>
-                <a href="../local-storage/ls.html"><p>Local storage</p></a>
-            </div>
+            <span w3-include-html="../../nav-iframe/nav-iframe.html"></span>
         </span>
     </nav>
     <main>
@@ -58,7 +53,9 @@ campo.innerHTML = `O ${tiger.nome} foi criado pela ${tiger.pais} durante a Segun
     <footer>
         &copy; Leandro Pessoa
     </footer>
-    <script src="../script/principal.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>w3.includeHTML();</script>
+    <script src="../../script/principal.js"></script>
     <script>
         let campo = document.getElementById("res");
         class blindado{

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+section#corpo{
+    background-color: rgb(228, 227, 199);
+    max-width: 600px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 10px;
+}
+div#content{
+    margin: 15px;
+}
+div#content > p#save{
+    font-size: 1.2em;
+    background-color: #F7E018;
+    padding: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    border-radius: 0px;
+    max-width: 550px;
+    height: 30px;
+    margin: auto;
+    border-radius: 3px;
+}
+div#content > p#save > button{
+    width: 30px;
+    height: 30px;
+    float: right;
+    text-align: center;
+    background-color: gainsboro;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+div#content > p#save > button > img{
+    width: 25px;
+    transform: translate(0.4px, 1.5px);
+}
+p#save:hover{
+    
+}
+div#escolha{
+    margin-top: 15px;
+    text-align: center;
+}
+div#escolha > textarea{
+    width: 320px;
+    height: 24px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    background-color: gainsboro;
+    border-radius: 3px;
+}
+div#escolha > button#ad{
+    padding: 5px;
+    border: 1px solid black;
+    transform: translate(0px, 0px);
+    background-color: #F7E018;
+    height: 35px;
+    width: 60px;
+    font-size: 0.9em;
+    border-radius: 3px;
+}
+div#escolha > button#ad:hover{
+    background-color: #fceb50;
+    cursor: pointer;
+    transition-duration: .3s;
+    transform: translate(-1px, -1px);
+    transition: transform .3s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.178);
+}
+button#ad > img{
+    width: 30px;
+    transform: translate(0px, -3px);
+}

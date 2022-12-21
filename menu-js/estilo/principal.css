@@ -97,6 +97,7 @@ nav h2{
 }
 nav div{
     padding: 30px;
+    padding-bottom: 0px;
 }
 nav p{
     padding: 5px;
@@ -120,6 +121,7 @@ nav a{
     color: black;
     font-size: 1.2em;
 }
+
 main{
     margin: auto;
     max-width: 700px;
@@ -145,6 +147,7 @@ fieldset{
     padding: 10px;
     padding-top: 14px;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 section.codigo{
     margin: 30px;
@@ -181,6 +184,17 @@ main a{
     text-decoration: none;
     color: black;
 }
+section.iframe{
+    text-align: center;
+}
+iframe{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 600px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid #F7E018;
+}
 footer{
     text-align: center;
     background-color: #F7E018;
@@ -188,7 +202,12 @@ footer{
     bottom: 0;
     left: 0;
 }
-@media screen and (max-width:468px) {
+@media screen and (max-width: 400px) {
+    iframe{
+        width: 250px;
+    }
+}
+@media screen and (min-width: 401px) and (max-width:568px) {
     main{
         font-size: 0.9em;
         min-height: 100vh;
@@ -202,9 +221,15 @@ footer{
     div#img{
         top: -44px;
     }
+    iframe{
+        width: 390px;
+    }
 }
-@media screen and (min-width: 468px) and (max-width: 1024px) {
+@media screen and (min-width: 568px) and (max-width: 1024px) {
     main{
         width: 80vw
+    }
+    iframe{
+        width: 470px;
     }
 }

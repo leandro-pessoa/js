@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage</title>
+    <link rel="shortcut icon" href="../../imagens/js-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilo/principal.css">
+</head>
+<body>
+    <header>
+        <section>
+            <div>
+                <button id="but">
+                    <img src="../../imagens/menu.png" alt="">
+                </button>
+            </div>
+            <div id="img">
+                <a href="../../principal/principal.html" target="_self" rel="prev"><img src="../../imagens/js-logo-200.png" alt=""></a>
+            </div>
+        </section>
+    </header>
+    <nav id="nav">
+        <span class="nav-content">
+            <button id="fechar">X</button>
+            <span w3-include-html="../../nav-iframe/nav-iframe.html"></span>
+        </span>
+    </nav>
+    <main>
+        <h2 class="principal">Local storage</h2><hr>
+        <section class="codigo">
+            <h2>Básico</h2>
+            <pre>
+let res = document.querySelector("pre#res");
+<h3>Inserindo valores</h3>
+//localStorage.setItem("nome", "Leandro");
+//OU
+localStorage.nome = 'Leandro';
+<h3>Removendo valores</h3>
+//localStorage.removeItem("nome");
+<h3>Chamando valores</h3>
+//let nome = localStorage.getItem("nome"); 
+//OU
+let nome = localStorage.nome;
+res.innerHTML = `O valor armazenado é: ${nome}`
+            </pre>
+        </section>
+        <section class="codigo resultado">
+            <pre id="res"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Contador de visitas ao site</h2>
+            <pre>
+let res2 = document.querySelector('pre#res2');
+if(localStorage.visitas){
+    localStorage.visitas = Number(localStorage.visitas) + 1;
+}
+else{
+    localStorage.visitas = 1;
+}
+res2.innerHTML = `Visitas: ${localStorage.visitas}`;
+            </pre>
+        </section>
+        <section class="codigo resultado" style="min-height: 10px;">
+            <pre id="res2"></pre>
+        </section>
+        <section class="codigo" style="min-height: 130px;">
+            <h2>Página personalizável permanente</h2>
+            <pre>
+let main = document.querySelector('main');
+let fundo = document.getElementsByName('corf');
+let letra = document.getElementsByName('corl');
+but.addEventListener('click', e => {
+    if(fundo[0].checked){
+        localStorage.setItem('fundo', 'blue');
+    }
+    else if(fundo[1].checked){
+        localStorage.setItem('fundo', 'red');
+    }
+    else{
+        localStorage.setItem('fundo', 'green');
+    }
+    if(letra[0].checked){
+        localStorage.setItem('letra', 'white');
+    }
+    else{
+        localStorage.setItem('letra', 'black');
+    }
+    document.body.style.backgroundColor = localStorage.getItem('fundo');
+    main.style.color = localStorage.getItem('letra');
+})
+document.body.style.backgroundColor = localStorage.getItem('fundo');
+main.style.color = localStorage.getItem('letra');
+            </pre>
+        </section>
+        <section class="iframe">
+            <iframe src="iframe.html" frameborder="0"></iframe>
+        </section>
+    </main>
+    <footer>
+        &copy; Leandro Pessoa
+    </footer>
+    <script src="../../script/principal.js"></script>
+    <script>
+        let res = document.querySelector("pre#res");
+        //localStorage.setItem("nome", "Leandro");
+        //OU
+        localStorage.nome = 'Leandro';
+        //localStorage.removeItem("nome");
+        //let nome = localStorage.getItem("nome"); 
+        //OU
+        let nome = localStorage.nome;
+        res.innerHTML = `O valor armazenado é: ${nome}`;
+
+        //conntdor de visitas
+        let res2 = document.querySelector('pre#res2');
+        if(localStorage.visitas){
+            localStorage.visitas = Number(localStorage.visitas) + 1;
+        }
+        else{
+            localStorage.visitas = 1;
+        }
+        res2.innerHTML = `Visitas: ${localStorage.visitas}`;
+    </script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>w3.includeHTML();</script>
+</body>
+<!--
+<section class="codigo" style="min-height: 130px;">
+    <h2></h2>
+    <pre>
+
+    </pre>
+</section>
+<section class="codigo resultado" style="min-height: 10px;">
+    <pre id="res"></pre>
+</section>
+-->
+</html>
