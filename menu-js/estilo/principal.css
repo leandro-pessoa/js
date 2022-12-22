@@ -85,6 +85,7 @@ nav{
     transition: all 0.3s;
     overflow: auto;
     color: black;
+    z-index: 1000;
 }
 nav hr{
     width: 260px;

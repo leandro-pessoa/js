@@ -13,39 +13,70 @@ div#content{
 main{
     height: 1000px;
 }
-div#content > p#save{
+article#save{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
     font-size: 1.2em;
     background-color: #F7E018;
     padding: 15px;
+    padding-right: 0px;
     border-radius: 0px;
-    max-width: 550px;
     margin: auto;
-    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     font-size: 0.95em;
+    margin-bottom: 5px;
+    text-align: justify;
 }
-div#content > p#save > button{
+.trash-box{
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+    flex-grow: 1;
+    order: 1;
+    flex-basis: 200px;
+    min-height: 50px;
+    margin-bottom: -15px;
+    margin-top: -15px;
+    margin-left: 5px;
+    background-color: rgb(185, 182, 182);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+article span.texto{
+    display: inline-flex;
+    font-size: 1em;
+    text-align: left;
+    flex-grow: 2;
+    order: 2;
+    
+}
+article p:hover{
+    transform: none;
+}
+article#save button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 30px;
     height: 30px;
-    float: right;
     text-align: center;
     background-color: rgb(250, 63, 63);
     border: 1px solid black;
     border-radius: 3px;
-    transform: translate(0px, -2.5px);
+    padding: 1px 0px;
 }
-p#save button#lixo:hover{
+button#lixo:hover{
     cursor: pointer;
     background-color: rgb(248, 25, 25);
     transition: transform .3s;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.116);
-    transform: translate(-1px, -3px);
+    transform: translate(-16px, -16px);
 }
-div#content > p#save > button#lixo > img{
+button#lixo img{
     width: 25px;
-    transform: translate(0.5px, 1px);
-}
-p#save:hover{
-    transform: none;
 }
 div#escolha{
     margin-top: 15px;
@@ -59,6 +90,7 @@ div#escolha > textarea{
     font-size: 0.8em;
     background-color: gainsboro;
     border-radius: 3px;
+    resize: none;
 }
 div#escolha > button#ad{
     padding: 5px;
