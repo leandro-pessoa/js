@@ -3,39 +3,49 @@ section#corpo{
     background-color: rgb(228, 227, 199);
     max-width: 600px;
     margin: auto;
-    border-radius: 20px;
+    border-radius: 3px;
     padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.158);
 }
 div#content{
     margin: 15px;
 }
+main{
+    height: 1000px;
+}
 div#content > p#save{
     font-size: 1.2em;
     background-color: #F7E018;
-    padding: 5px;
-    padding-top: 5px;
-    padding-right: 10px;
+    padding: 15px;
     border-radius: 0px;
     max-width: 550px;
-    height: 30px;
     margin: auto;
     border-radius: 3px;
+    font-size: 0.95em;
 }
 div#content > p#save > button{
     width: 30px;
     height: 30px;
     float: right;
     text-align: center;
-    background-color: gainsboro;
+    background-color: rgb(250, 63, 63);
     border: 1px solid black;
     border-radius: 3px;
+    transform: translate(0px, -2.5px);
 }
-div#content > p#save > button > img{
+p#save button#lixo:hover{
+    cursor: pointer;
+    background-color: rgb(248, 25, 25);
+    transition: transform .3s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.116);
+    transform: translate(-1px, -3px);
+}
+div#content > p#save > button#lixo > img{
     width: 25px;
-    transform: translate(0.4px, 1.5px);
+    transform: translate(0.5px, 1px);
 }
 p#save:hover{
-    
+    transform: none;
 }
 div#escolha{
     margin-top: 15px;
@@ -53,7 +63,6 @@ div#escolha > textarea{
 div#escolha > button#ad{
     padding: 5px;
     border: 1px solid black;
-    transform: translate(0px, 0px);
     background-color: #F7E018;
     height: 35px;
     width: 60px;

@@ -18,6 +18,7 @@ header > section{
     width: 100%;
     background-color: #F7E018;
     height: 70px;
+    z-index: 1000;
 }
 header div#img img{
     width: 55px;
