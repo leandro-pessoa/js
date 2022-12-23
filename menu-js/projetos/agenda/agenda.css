@@ -1,4 +1,7 @@
 @charset "UTF-8";
+main{
+    min-height: 74vh;
+}
 section#corpo{
     background-color: rgb(228, 227, 199);
     max-width: 600px;
@@ -7,11 +10,11 @@ section#corpo{
     padding: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.158);
 }
+div#vazio{
+    text-align: center;
+}
 div#content{
     margin: 15px;
-}
-main{
-    height: 1000px;
 }
 article#save{
     display: flex;
@@ -28,6 +31,12 @@ article#save{
     font-size: 0.95em;
     margin-bottom: 5px;
     text-align: justify;
+}
+article#save:hover{
+    background-color: rgb(185, 182, 182);
+    transform: translate(-2px, -2px);
+    transition: transform .3s;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.151);
 }
 .trash-box{
     position: relative;
@@ -50,7 +59,6 @@ article span.texto{
     text-align: left;
     flex-grow: 2;
     order: 2;
-    
 }
 article p:hover{
     transform: none;
@@ -67,30 +75,33 @@ article#save button{
     border: 1px solid black;
     border-radius: 3px;
     padding: 1px 0px;
+    z-index: 999;
 }
-button#lixo:hover{
+article#save button:hover{
     cursor: pointer;
     background-color: rgb(248, 25, 25);
     transition: transform .3s;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.116);
     transform: translate(-16px, -16px);
 }
-button#lixo img{
+article#save button img{
     width: 25px;
+    z-index: 1;
 }
 div#escolha{
     margin-top: 15px;
     text-align: center;
 }
-div#escolha > textarea{
-    width: 320px;
+div#escolha > input[type='text']{
+    width: 500px;
     height: 24px;
     padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8em;
     background-color: gainsboro;
     border-radius: 3px;
-    resize: none;
+    border: 1px solid black;
+    transform: translate(0px, -13px);
 }
 div#escolha > button#ad{
     padding: 5px;
@@ -112,4 +123,72 @@ div#escolha > button#ad:hover{
 button#ad > img{
     width: 30px;
     transform: translate(0px, -3px);
+}
+input[type="checkbox"]{
+    display: inline-flex;
+    order: 3;
+    margin-right: 10px;
+}
+:checked ~ span.texto{
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 400px) {
+    main{
+        padding: 30px 3px;
+    }
+    main h2.principal{
+        font-size: 1.55em;
+    }
+    article#save button{
+        width: 20px;
+        height: 20px;
+    }
+    article#save button:hover{
+        transform: translate(-11px, -11px);
+    }
+    article#save button img{
+        width: 17.5px;
+    }
+    article span.texto{
+        font-size: 0.85em;
+    }
+    div#escolha input[type='text']{
+        width: 220px;
+    }
+    div#escolha button#ad{
+        width: 40px;
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 568px){
+    main{
+        padding: 30px 3px;
+    }
+    main h2.principal{
+        font-size: 1.55em;
+    }
+    article#save button{
+        width: 20px;
+        height: 20px;
+    }
+    article#save button:hover{
+        transform: translate(-11px, -11px);
+    }
+    article#save button img{
+        width: 17.5px;
+    }
+    article span.texto{
+        font-size: 0.85em;
+    }
+    div#escolha input[type='text']{
+        width: 300px;
+    }
+    div#escolha button#ad{
+        width: 40px;
+    }
+}
+@media screen and (min-width: 568px) and (max-width: 1024px) {
+    div#escolha input[type='text']{
+        width: 350px;
+    }
 }

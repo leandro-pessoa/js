@@ -130,7 +130,7 @@ main{
     text-align: justify;
     background-color: rgb(255, 255, 255);
     padding: 30px;
-    min-height: 100vh;
+    height: auto;
 }
 h2{
     margin-bottom: 20px;
@@ -211,7 +211,6 @@ footer{
 }
 @media screen and (min-width: 401px) and (max-width:568px) {
     main{
-        font-size: 0.9em;
         min-height: 100vh;
     }
     button#but{
