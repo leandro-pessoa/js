@@ -1,6 +1,8 @@
 let txt = document.querySelector('textarea#itxt');
 let ad = document.querySelector('button#ad');
 let div = document.querySelector('div#content');
+let apagar = document.querySelector('button#lixo');
+let box = document.querySelector('span.texto');
 ad.addEventListener('click', e => {
     if (txt.value.length == 0){
         alert('Insira valores antes de prosseguir!');
@@ -20,3 +22,6 @@ ad.addEventListener('click', e => {
         txt.focus();
     }
 });
+apagar.addEventListener('click', e => {
+    
+})
