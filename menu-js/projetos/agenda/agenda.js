@@ -86,6 +86,5 @@ document.querySelector('button#ad').addEventListener('click', e => {
         render();
     }
 });
-apear();
 render();
 
