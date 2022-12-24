@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="shortcut icon" href="../../imagens/js-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilo/principal.css">
+</head>
+<body>
+    <header>
+        <section>
+            <div>
+                <button id="but">
+                    <img src="../../imagens/menu.png" alt="">
+                </button>
+            </div>
+            <div id="img">
+                <a href="../../principal/principal.html" target="_self" rel="prev"><img src="../../imagens/js-logo-200.png" alt=""></a>
+            </div>
+        </section>
+    </header>
+    <nav id="nav">
+        <span class="nav-content">
+            <button id="fechar">X</button>
+            <span w3-include-html="../../nav-iframe/nav-iframe.html"></span>
+        </span>
+    </nav>
+    <main>
+        <h2 class="principal">DOM</h2><hr>
+        <section class="codigo">
+            <h2>.children</h2>
+            <pre>
+let codigo = document.querySelector('section.codigo');
+let children = codigo.children[0];
+children.style.color = 'blue';
+            </pre>
+        </section>
+        <section class="codigo">
+            <h2 id="test">.parentNode</h2>
+            <pre>
+let h2 = document.querySelector('h2#test');
+let parent = h2.parentNode;
+parent.style.backgroundColor = 'gray';
+            </pre>
+        </section>
+        <section class="codigo" id="test2">
+            <h2>.childNodes</h2>
+            <pre>
+let codigo2 = document.querySelector('section#test2');
+let res = document.querySelector('pre#res');
+let nodes = codigo2.childNodes.length;
+res.innerHTML = nodes;
+            </pre>
+            <p></p>
+            <p></p>
+        </section>
+        <section class="codigo resultado">
+            <pre id="res"></pre>
+        </section>
+        <section class="codigo" id="test3"><span>first</span>
+            <h2>.firstChild</h2>
+            <pre>
+let codigo3 = document.querySelector('section#test3');
+let first = codigo3.firstChild;
+first.innerHTML ='abc';
+            </pre>
+        </section>
+        <section class="codigo" id="test4">
+            <h2>.lastChild</h2>
+            <pre>
+codigo4 = document.querySelector('section#test4');
+let last = codigo4.lastChild;
+last.style.fontSize = '0.5em';
+            </pre>
+            <span>last</span></section>
+            <section class="codigo" id="test5">
+                <h2>.remove( )</h2>
+                <pre>
+let codigo5 = document.querySelector('section#test5');
+let last2 = codigo5.lastChild;
+last2.remove();
+                </pre>
+                <span>abc</span></section>
+            <section class="codigo" id="test6">
+                <h2>.nextSibling</h2>
+                <pre>
+let codigo6 = document.querySelector('section#test6');
+let next = codigo6.nextSibling;
+next.innerHTML = 'acb'
+                </pre>
+            </section><span></span><br>
+            <span></span><section class="codigo" id="test7">
+                <h2>.previousSibling</h2>
+                <pre>
+let codigo7 = document.querySelector('section#test7');
+let previous = codigo7.previousSibling;
+previous.innerHTML = 'previous';
+previous.style.color = 'green';
+                </pre>
+            </section>
+            <section class="codigo" id="test8">
+                <h2>.createElement( ) / .append( )</h2>
+                <pre>
+let create = document.createElement('iframe');
+create.src = '../classes/classes.html';
+create.style.width = '300px';
+create.style.height = '300px';
+document.querySelector('section#res').append(create);
+                </pre>
+            </section>
+            <section class="codigo resultado" id="res" style="height: 300px;"></section>
+            <section class="codigo">
+                <h2>.insertBefore( ) / .insertAfter( )</h2>
+                <pre>
+let elementoCriado = document.createElement('p');
+elementoCriado.innerText = 'Elemento criado antes da div'
+let div = document.querySelector('div#abc');
+let elementoPai = div.parentNode; 
+elementoPai.insertBefore(elementoCriado, div);
+                </pre>
+            </section>
+            <section id="res2" class="codigo resultado" style="height: 100px;">
+                <div id="abc">div</div>
+            </section>
+            <section class="codigo" id="idTeste">
+                <h2>.getAttribute( )</h2>
+                <pre>
+let sectionTeste = document.querySelector('section#idTeste');
+let resultado = document.querySelector('pre#res3');
+let atributo = sectionTeste.getAttribute('id');
+resultado.innerText = `O id da section anterior é ${atributo}`;
+            </pre>
+            </section>
+            <section class="codigo resultado">
+                <pre id="res3"></pre>
+            </section>
+            <section class="codigo">
+                <h2>.setAttribute( )</h2>
+                <pre>
+let resultado2 = document.querySelector('pre#res4');
+let elementoTeste = resultado2.firstChild;
+let get = elementoTeste.getAttribute('class');
+resultado2.innerHTML = `O elemento teste tem a class: ${get}`;
+let set = elementoTeste.setAttribute('class', 'teste');
+let get2 = elementoTeste.getAttribute('class')
+resultado2.innerHTML += `Agora, o elemento teste tem a class: ${get2}`;
+                </pre>
+            </section>
+            <section class="codigo resultado">
+                <pre id="res4"><span></span>
+                </pre>
+            </section>
+            <section class="codigo">
+                <h2>.removeAttribute( )</h2>
+                <pre>
+let resultado3 = document.querySelector('pre#res5');
+let elementoTeste2 = resultado3.firstChild;
+let get3 = elementoTeste2.getAttribute('id');
+resultado3.innerHTML = `O id do elemento teste é: ${get3}`;
+let remove = elementoTeste2.removeAttribute('id');
+let get4 = elementoTeste2.getAttribute('id');
+resultado3.innerHTML += `<br>Agora, o id do elemento teste é: ${get4}`;
+                </pre>
+            </section>
+            <section class="codigo">
+                <pre id="res5"><span id="xyz"></span></pre>
+            </section>
+    </main>
+    <footer>
+        &copy; Leandro Pessoa
+    </footer>
+    <script src="../../script/principal.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>w3.includeHTML();</script>
+    <script>
+        let codigo = document.querySelector('section.codigo');
+        let children = codigo.children[0];
+        children.style.color = 'blue';
+
+        let h2 = document.querySelector('h2#test');
+        let parent = h2.parentNode;
+        parent.style.backgroundColor = 'gray';
+
+        let codigo2 = document.querySelector('section#test2');
+        let res = document.querySelector('pre#res');
+        let nodes = codigo2.childNodes.length;
+        res.innerHTML = nodes;
+
+        let codigo3 = document.querySelector('section#test3');
+        let first = codigo3.firstChild;
+        first.innerHTML ='abc';
+
+        codigo4 = document.querySelector('section#test4');
+        let last = codigo4.lastChild;
+        last.style.fontSize = '0.5em';
+
+        let codigo5 = document.querySelector('section#test5');
+        let last2 = codigo5.lastChild;
+        last2.remove();
+
+        let codigo6 = document.querySelector('section#test6');
+        let next = codigo6.nextSibling;
+        next.innerHTML = 'next';
+
+        let codigo7 = document.querySelector('section#test7');
+        let previous = codigo7.previousSibling;
+        previous.innerHTML = 'previous';
+        previous.style.color = 'green';
+
+        let create = document.createElement('iframe');
+        create.src = '../classes/classes.html';
+        create.style.width = '300px';
+        create.style.height = '300px';
+        document.querySelector('section#res').append(create);
+
+        let elementoCriado = document.createElement('p');
+        elementoCriado.innerText = 'Elemento criado antes da div'
+        let div = document.querySelector('div#abc');
+        let elementoPai = div.parentNode; 
+        elementoPai.insertBefore(elementoCriado, div);
+
+        let sectionTeste = document.querySelector('section#idTeste');
+        let resultado = document.querySelector('pre#res3');
+        let atributo = sectionTeste.getAttribute('id');
+        resultado.innerText = `O id da section anterior é ${atributo}`;
+
+        let resultado2 = document.querySelector('pre#res4');
+        let elementoTeste = resultado2.firstChild;
+        let get = elementoTeste.getAttribute('class');
+        resultado2.innerHTML = `O elemento teste tem a class: ${get}`;
+        let set = elementoTeste.setAttribute('class', 'teste');
+        let get2 = elementoTeste.getAttribute('class')
+        resultado2.innerHTML += `<br>Agora, o elemento teste tem a class: ${get2}`;
+
+        let resultado3 = document.querySelector('pre#res5');
+        let elementoTeste2 = resultado3.firstChild;
+        let get3 = elementoTeste2.getAttribute('id');
+        resultado3.innerHTML = `O id do elemento teste é: ${get3}`;
+        let remove = elementoTeste2.removeAttribute('id');
+        let get4 = elementoTeste2.getAttribute('id');
+        resultado3.innerHTML += `<br>Agora, o id do elemento teste é: ${get4}`;
+        </script>
+</body>
+</html>

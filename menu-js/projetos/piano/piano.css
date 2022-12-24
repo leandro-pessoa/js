@@ -1,0 +1,38 @@
+@charset "UTF-8";
+main{
+    min-height: 500px;
+}
+section#body{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+span.black{
+    display: inline-flex;
+    z-index: 901;
+    margin: 6.5px;
+    width: 50px;
+    height: 140px;
+    background-color: black;
+    margin: 0px -25px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.308);
+}
+span.black:hover{
+    background-color: rgb(41, 41, 41);
+    transition: .2s;
+}
+span.white{
+    display: inline-flex;
+    justify-content: stretch;
+    z-index: 90;
+    background-color: rgb(226, 226, 226);
+    border: 1px solid gray;
+    margin: 0px;
+    width: 50px;
+    height: 200px;
+    margin: 0px 0px;
+}
+span.white:hover{
+    background-color: rgb(235, 229, 229);
+    transition: .2s;
+}
