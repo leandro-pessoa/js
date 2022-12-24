@@ -13,13 +13,17 @@ span.black{
     margin: 6.5px;
     width: 50px;
     height: 140px;
-    background-color: black;
+    background-color: rgb(31, 31, 31);
     margin: 0px -25px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.308);
 }
 span.black:hover{
     background-color: rgb(41, 41, 41);
     transition: .2s;
+    cursor: pointer;
+}
+span.black:active{
+    height: 145px;
 }
 span.white{
     display: inline-flex;
@@ -35,4 +39,5 @@ span.white{
 span.white:hover{
     background-color: rgb(235, 229, 229);
     transition: .2s;
+    cursor: pointer;
 }
