@@ -208,6 +208,9 @@ footer{
     iframe{
         width: 250px;
     }
+    nav{
+        padding-bottom: 20px;
+    }
 }
 @media screen and (min-width: 401px) and (max-width:568px) {
     main{
@@ -224,6 +227,9 @@ footer{
     }
     iframe{
         width: 390px;
+    }
+    nav{
+        padding-bottom: 20px;
     }
 }
 @media screen and (min-width: 568px) and (max-width: 1024px) {
