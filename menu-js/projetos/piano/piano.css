@@ -66,6 +66,9 @@ section#voltar > a{
 section#voltar > a:hover{
     text-decoration: underline;
 }
+footer{
+    position: absolute;
+}
 @media screen and (max-width: 668px) {
     section#body{
         margin-top: none;

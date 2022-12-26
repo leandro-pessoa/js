@@ -9,6 +9,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1em;
     background-color: rgb(235, 235, 235);
+    position: relative;
 }
 header{
     height: 70px;
@@ -198,11 +199,11 @@ iframe{
     border: 1px solid #F7E018;
 }
 footer{
+    width: 100%;
     text-align: center;
     background-color: #F7E018;
-    padding: 10px;
+    padding: 10px 0px;
     bottom: 0;
-    left: 0;
 }
 @media screen and (max-width: 400px) {
     iframe{
