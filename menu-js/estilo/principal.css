@@ -82,8 +82,8 @@ nav{
     background-color: rgb(190, 190, 190);
     width: 0px;
     height: 100%;
-    transition: all 0.3s;
     overflow: auto;
+    transition: all 0.3s;
     color: black;
     z-index: 1000;
 }

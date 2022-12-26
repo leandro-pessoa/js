@@ -15,7 +15,7 @@ but.addEventListener('click', e => {
 })
 but.addEventListener('click', e => {
     if(open == false){
-        setTimeout(block, 1000*0.13);
+        setTimeout(block, 1000*0.19);
         nav.style.width = `${size}`;
     }
     content.style.display = 'none';

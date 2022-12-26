@@ -1,8 +1,11 @@
 @charset "UTF-8";
-main{
-    min-height: 500px;
+section#rotacione{
+    display: none;
+    text-align: center;
+    font-size: 1.5em;
 }
 section#body{
+    margin-top: 55px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -16,6 +19,7 @@ span.black{
     background-color: rgb(31, 31, 31);
     margin: 0px -25px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.308);
+    border-bottom: 5px solid rgb(80, 79, 79);
 }
 span.black:hover{
     background-color: rgb(41, 41, 41);
@@ -24,20 +28,67 @@ span.black:hover{
 }
 span.black:active{
     height: 145px;
+    border-bottom: 4px solid rgb(85, 84, 84);
+    box-shadow: inset 0px 0px 10px rgba(194, 194, 194, 0.144);
 }
 span.white{
     display: inline-flex;
     justify-content: stretch;
     z-index: 90;
     background-color: rgb(226, 226, 226);
-    border: 1px solid gray;
+    border: 1px solid rgb(190, 190, 190);
     margin: 0px;
     width: 50px;
     height: 200px;
     margin: 0px 0px;
+    border-bottom: 5px solid rgba(128, 128, 128, 0.685);
 }
 span.white:hover{
-    background-color: rgb(235, 229, 229);
-    transition: .2s;
+    background-color: rgb(245, 245, 245);
+    transition: .3s;
     cursor: pointer;
+}
+span.white:active{
+    height: 207px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.233);
+    border-bottom: 4px solid gray;
+}
+@media screen and (max-width: 668px) {
+    section#body{
+        margin-top: none;
+    }
+    span.black{
+        width: 40px;
+        margin: 0px -20px;    }
+    span.white{
+        width: 40px;
+    }
+}
+@media screen and (max-width: 490px) {
+    section#rotacione{
+        display: block;
+    }
+    section#body{
+        display: none;
+        margin-top: -10px;
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 800px){
+    body{
+        position: relative;
+        overflow: hidden;
+    }
+    header{
+        display: none;
+    }
+    main{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 300px;
+    }
+    footer{
+        display: none;
+    }
 }

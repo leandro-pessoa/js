@@ -1,4 +1,3 @@
-
 let getDados = () => JSON.parse(localStorage.getItem('todoList')) ?? [];
 let setDados = (banco) => localStorage.setItem('todoList', JSON.stringify(banco));
 let criarSave = (tarefa, stat='', indice) => {
