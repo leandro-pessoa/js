@@ -53,6 +53,19 @@ span.white:active{
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.233);
     border-bottom: 4px solid gray;
 }
+section#voltar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: none;
+}
+section#voltar > a{
+    text-decoration: none;
+    color: black;
+}
+section#voltar > a:hover{
+    text-decoration: underline;
+}
 @media screen and (max-width: 668px) {
     section#body{
         margin-top: none;
@@ -87,6 +100,9 @@ span.white:active{
         left: 50%;
         transform: translate(-50%, -50%);
         height: 300px;
+    }
+    section#voltar{
+        display: block;
     }
     footer{
         display: none;
