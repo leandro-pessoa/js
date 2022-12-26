@@ -81,8 +81,8 @@ nav{
     position: fixed;
     background-color: rgb(190, 190, 190);
     width: 0px;
-    height: 100%;
-    overflow: auto;
+    height: 89vh;
+    overflow-y: auto;
     transition: all 0.3s;
     color: black;
     z-index: 1000;

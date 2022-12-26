@@ -94,6 +94,9 @@ section#voltar > a:hover{
     header{
         display: none;
     }
+    nav{
+        display: none;
+    }
     main{
         position: absolute;
         top: 50%;
