@@ -4,6 +4,7 @@ import Led from './componentes/Led'
 import Hora from './componentes/Hora'
 import Log from './componentes/Log'
 import Cor from './componentes/Cor'
+import Colorido from './componentes/Colorido'
 import './App.css'
 
 export default function App() {
@@ -24,7 +25,8 @@ export default function App() {
       </a><hr/>
       <Hora/><hr/>
       <Log/><hr/>
-      <Cor/>
+      <Cor/><hr/>
+      <Colorido/>
     </div>
   );
 }
