@@ -80,7 +80,7 @@ p.dado{
   display: inline-table;
   padding: 10px;
 }
-p.dado input{
+input{
   border: none;
   background-color: lightblue;
   padding: 5px;
@@ -88,8 +88,11 @@ p.dado input{
 }
 p.button{
   text-align: center;
+  display: inline-table;
+  margin-top: 10px;
 }
 button{
+  display: inline-table;
   padding: 5px 20px;
   border: none;
   background-color: rgb(63, 63, 243);
@@ -102,6 +105,9 @@ button:hover{
   background-color: rgb(138, 184, 199);
   cursor: pointer;
   transition: .4s;
+}
+input.iinpremo{
+  margin-left: -100px;
 }
 p.preencher{
   color: red;

@@ -9,6 +9,7 @@ export default function Main(){
             <Relatorio/>
             <h2>Insira seus dados: </h2>
             <Adicionar/>
+            
         </main>
     );
 }
