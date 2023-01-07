@@ -22,7 +22,6 @@ body{
 input:focus{
   outline: 0;
 }
-
 header{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
@@ -31,10 +30,15 @@ header{
   color: var(--reactColor);
   font-size: 3.5em;
   margin-bottom: 30px;
+  padding-top: 15px;
 }
 header img{
   width: 100px;
-  transform: translate(-10px, 25px);
+  transform: translate(-10px, 20px);
+}
+header h1{
+  display: inline;
+  font-size: 1.3em;
 }
 main{
   max-width: 700px;
@@ -53,8 +57,31 @@ main h2{
 hr{
   margin-bottom: 20px;
 }
+select{
+  min-width: 100px;
+  background-color: var(--reactColor);
+  border: none;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 3px;
+  outline: none;
+  font-size: 0.9em;
+}
+select:hover{
+  background-color: #8ae0f8;
+  transition: .3s;
+  cursor: pointer;
+}
+option{
+  background-color: white;
+}
 main p{
   padding: 10px 0px;
+}
+main p.filtro{
+  display: inline-table;
+  margin: 10px;
+  margin-top: 0px;
 }
 input{
   border: none;
@@ -82,7 +109,29 @@ button:hover{
   cursor: pointer;
   transition: .3s;
 }
-
+div.tabela{
+  overflow: auto;
+}
+table{
+  width: 450px;
+  border-collapse: collapse;
+  margin: auto;
+}
+th{
+  padding: 10px;
+  border: 1px solid var(--reactColor);
+}
+td{
+  padding: 10px;
+  border: 1px solid var(--reactColor);
+}
+.naoencontrado{
+  color: rgb(248, 78, 78);
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 40px;
+}
 footer{
   text-align: center;
   position: fixed;
@@ -93,9 +142,15 @@ footer{
   color: var(--reactColor);
 }
 @media screen and (max-width: 568px) {
-  h1{
+  header{
+    
+  }
+  header img{
+    width: 80px;
+  }
+  header h1{
     margin-top: 5px;
-    font-size: 1.5em;
+    font-size: 1em;
   }
   h2{
     font-size: 1.2em;

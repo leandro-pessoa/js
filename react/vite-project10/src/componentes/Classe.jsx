@@ -54,5 +54,14 @@ class Classe extends React.Component{
             </div>
         )
     }
+    componentDidMount(){
+        console.log('Componente criado!')
+    }
+    componentDidUpdate(){
+        console.log('Componente atualizado!')
+    }
+    componentWillUnmount(){
+        console.log('Componente removido!')
+    }
 }
 export default Classe
